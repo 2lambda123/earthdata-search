@@ -109,7 +109,7 @@
     "array-to-sentence": "^2.0.0",
     "autoprefixer": "^10.4.5",
     "aws-sdk": "^2.1355.0",
-    "axios": "^0.21.4",
+    "axios": "^1.6.0",
     "axios-retry": "^3.2.4",
     "babel-loader": "^8.2.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
