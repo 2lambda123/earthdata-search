@@ -203,7 +203,20 @@ export const changePath = (path = '') => async (dispatch, getState) => {
 
   dispatch(actions.getTimeline())
 
+  // Fetch collections in the project
+  const { project = {} } = decodedParams || {}
+  const { collections: projectCollections = {} } = project
+  const { allIds = [] } = projectCollections
+
+  if (allIds.length > 0) {
+    // Project collection metadata needs to exist before calling retrieving access methods
+    await dispatch(actions.getProjectCollections())
+
+    await dispatch(actions.getProjectGranules())
+  }
+
   return null
+  
 }
 
 const updateUrl = ({ options, oldPathname, newPathname }) => (dispatch) => {
@@ -249,7 +262,7 @@ export const changeUrl = (options) => (dispatch, getState) => {
   if (typeof options === 'string') {
     [newPathname] = options.split('?')
 
-    const { projectId, name, path } = savedProject
+    const { projectId, undefined, path } = savedProject
     if (projectId || options.length > 2000) {
       if (path !== newOptions) {
         const requestObject = new ProjectRequest(authToken, earthdataEnvironment)
