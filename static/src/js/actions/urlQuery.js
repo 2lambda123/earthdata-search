@@ -20,8 +20,8 @@ import { getCollectionSortPreference } from '../selectors/preferences'
 import { buildConfig } from '../util/portals'
 import availablePortals from '../../../../portals'
 
-const restoreFromUrl = (payload) => ({
-  type: RESTORE_FROM_URL,
+export const restoreFromUrl = (payload) => ({
+  type: RESTORE_FROM_URL_ERROR,
   payload
 })
 
