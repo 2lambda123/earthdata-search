@@ -266,6 +266,7 @@ const actions = {
   removeCmrFacet,
   removeCollectionFromProject,
   removeError,
+  handleError,
   removeGranuleFromProjectCollection,
   removeSpatialFilter,
   removeSubscriptionDisabledFields,

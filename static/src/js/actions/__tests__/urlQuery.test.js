@@ -16,9 +16,15 @@ const mockStore = configureMockStore([thunk])
 beforeEach(() => {
   jest.clearAllMocks()
   jest.restoreAllMocks()
+  jest.clearAllMocks()
+  jest.restoreAllMocks()
+  jest.clearAllMocks()
+  jest.restoreAllMocks()
+  jest.clearAllMocks()
+  jest.restoreAllMocks()
 })
 
-describe('updateStore', () => {
+describe('changePath updateStore', () => {
   test('calls restoreFromUrl and gets new search results', async () => {
     const params = {
       cmrFacets: {},
@@ -141,7 +147,7 @@ describe('updateStore', () => {
   })
 
   describe('when a portal parameter is provided', () => {
-    test('loads the included styles', async () => {
+    test('loadsTheIncludedStyles', async () => {
       jest.mock('../../../../../portals/airmoss/styles.scss', () => ({
         unuse: jest.fn(),
         use: jest.fn()
