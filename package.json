@@ -201,7 +201,7 @@
     "regenerator-runtime": "^0.13.9",
     "reselect": "^4.1.5",
     "resolve-url-loader": "^5.0.0",
-    "sanitize-html": "^2.7.0",
+    "sanitize-html": "^2.12.1",
     "sass-loader": "^13.2.0",
     "scatter-swap": "^0.1.0",
     "serverless": "^3.30.1",
